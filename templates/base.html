@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>💰 Expense Tracker</h1>
+
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/add">Add Expense</a> |
+        <a href="/report">Report</a>
+    </nav>
+    <hr>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

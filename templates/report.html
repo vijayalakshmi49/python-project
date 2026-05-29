@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expense Report</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="report-container">
+
+    <h1>📊 Expense Report</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>💰 Total Expense</h3>
+            <p>₹5000</p>
+        </div>
+
+        <div class="card">
+            <h3>🚗 Top Category</h3>
+            <p>Transport</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Monthly Budget</h3>
+            <p>₹10000</p>
+        </div>
+
+    </div>
+
+    {% if chart %}
+        <img src="{{ url_for('static', filename='charts/report.png') }}" width="500">
+    {% else %}
+        <p>No data available to generate report.</p>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
